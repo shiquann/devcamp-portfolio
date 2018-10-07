@@ -30,7 +30,7 @@ j = 0
 9.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio title: #{portfolio_item}" ,
-        subtitle: "my greate service" ,
+        subtitle: "my great service" ,
         body: list[j] , 
         main_image:  "https://via.placeholder.com/600x400",
         thumb_image: "https://via.placeholder.com/350x200"
@@ -38,8 +38,9 @@ j = 0
     )
     if j == 2
         j = 0
+    else
+        j += 1
     end
-    j +=1
 end
 
 puts '9 portfolio items created'
